@@ -16,17 +16,7 @@ extern NSString *const XDListViewSetNeedsReloadNotification;
 @protocol XDListViewDataSource;
 @protocol XDListViewDelegate;
 
-@interface XDListView : UIView <UIScrollViewDelegate> {
-@private
-    UIScrollView     *mScrollView;
-    BOOL              mStickToBottom;
-    BOOL              mClearCellCacheOnReload;
-    BOOL              mAnimateStickToBottom;
-    
-    NSInteger         mCacheRowCount;
-    NSMutableArray   *mRectCache;
-    NSCache          *mCellsCache;
-}
+@interface XDListView : UIView <UIScrollViewDelegate>
 
 @property (nonatomic,assign) id<XDListViewDataSource> dataSource;
 @property (nonatomic,assign) id<XDListViewDelegate> delegate;
@@ -51,14 +41,14 @@ extern NSString *const XDListViewSetNeedsReloadNotification;
 - (CGFloat)listView:(XDListView *)aView
 heightForRowAtIndex:(NSUInteger) aRow;
 
-- (void)   listView:(XDListView*)aView
+- (void)listView:(XDListView*)aView
 didSelectRowAtIndex:(NSUInteger) aRow;
 
 @end
 
 @protocol XDListViewDataSource <NSObject>
 
-- (id)   listView:(XDListView*)aListView
+- (id)listView:(XDListView*)aListView
 cellForRowAtIndex:(NSUInteger)aRow;
 
 - (NSUInteger)numberOfRowsInListView:(XDListView*)aView;
@@ -66,9 +56,4 @@ cellForRowAtIndex:(NSUInteger)aRow;
 @end
 
 
-@interface NSMutableArray (XDListViewDequeueReusable)
 
-- (void)xd_list_enqueue:(id)aObject;
-- (id)xd_list_dequeue;
-
-@end

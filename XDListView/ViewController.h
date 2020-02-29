@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "XDListView.h"
 
-@interface ViewController : UIViewController<XDListViewDataSource,XDListViewDelegate>{
+@interface ViewController : UIViewController<
+    XDListViewDataSource,
+    XDListViewDelegate>
+{
     NSUInteger	mCount;
 }
+
 @property (nonatomic, retain) IBOutlet XDListView *listView;
 
 @end

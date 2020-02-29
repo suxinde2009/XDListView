@@ -13,10 +13,12 @@
 		62DD39351C551D1D00E7EA50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD39331C551D1D00E7EA50 /* Main.storyboard */; };
 		62DD39371C551D1D00E7EA50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DD39361C551D1D00E7EA50 /* Assets.xcassets */; };
 		62DD393A1C551D1D00E7EA50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD39381C551D1D00E7EA50 /* LaunchScreen.storyboard */; };
-		62DD39441C551D7900E7EA50 /* XDListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD39431C551D7900E7EA50 /* XDListView.m */; };
+		884FA6AFE4A5DB77C0A45B14 /* Pods_XDListView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124BA2F7993744C49625669C /* Pods_XDListView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		124BA2F7993744C49625669C /* Pods_XDListView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDListView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF83E599E01578C9D3089F7 /* Pods-XDListView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDListView.debug.xcconfig"; path = "Target Support Files/Pods-XDListView/Pods-XDListView.debug.xcconfig"; sourceTree = "<group>"; };
 		62DD39271C551D1D00E7EA50 /* XDListView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XDListView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD392B1C551D1D00E7EA50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62DD392D1C551D1D00E7EA50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -27,8 +29,7 @@
 		62DD39361C551D1D00E7EA50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62DD39391C551D1D00E7EA50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62DD393B1C551D1D00E7EA50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62DD39421C551D7900E7EA50 /* XDListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDListView.h; sourceTree = "<group>"; };
-		62DD39431C551D7900E7EA50 /* XDListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDListView.m; sourceTree = "<group>"; };
+		CE4D1F2F8AC8373DB0F8D92B /* Pods-XDListView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDListView.release.xcconfig"; path = "Target Support Files/Pods-XDListView/Pods-XDListView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884FA6AFE4A5DB77C0A45B14 /* Pods_XDListView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AE7B58A00C6E6B682ECB8DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				124BA2F7993744C49625669C /* Pods_XDListView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A4C96FFA0F6424555CEFB78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FF83E599E01578C9D3089F7 /* Pods-XDListView.debug.xcconfig */,
+				CE4D1F2F8AC8373DB0F8D92B /* Pods-XDListView.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		62DD391E1C551D1D00E7EA50 = {
 			isa = PBXGroup;
 			children = (
 				62DD39291C551D1D00E7EA50 /* XDListView */,
 				62DD39281C551D1D00E7EA50 /* Products */,
+				5A4C96FFA0F6424555CEFB78 /* Pods */,
+				2AE7B58A00C6E6B682ECB8DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,7 +83,6 @@
 		62DD39291C551D1D00E7EA50 /* XDListView */ = {
 			isa = PBXGroup;
 			children = (
-				62DD39411C551D7900E7EA50 /* XDListView */,
 				62DD392D1C551D1D00E7EA50 /* AppDelegate.h */,
 				62DD392E1C551D1D00E7EA50 /* AppDelegate.m */,
 				62DD39301C551D1D00E7EA50 /* ViewController.h */,
@@ -83,15 +104,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		62DD39411C551D7900E7EA50 /* XDListView */ = {
-			isa = PBXGroup;
-			children = (
-				62DD39421C551D7900E7EA50 /* XDListView.h */,
-				62DD39431C551D7900E7EA50 /* XDListView.m */,
-			);
-			path = XDListView;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62DD393E1C551D1D00E7EA50 /* Build configuration list for PBXNativeTarget "XDListView" */;
 			buildPhases = (
+				47BE3AD74E25746F5E5C112B /* [CP] Check Pods Manifest.lock */,
 				62DD39231C551D1D00E7EA50 /* Sources */,
 				62DD39241C551D1D00E7EA50 /* Frameworks */,
 				62DD39251C551D1D00E7EA50 /* Resources */,
+				30CE1DA2E4F3F3F5D60C7A98 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +137,7 @@
 				TargetAttributes = {
 					62DD39261C551D1D00E7EA50 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = NZ7ATV9HL2;
 					};
 				};
 			};
@@ -131,6 +146,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -157,6 +173,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30CE1DA2E4F3F3F5D60C7A98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XDListView/Pods-XDListView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/XDListView/XDListView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XDListView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XDListView/Pods-XDListView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47BE3AD74E25746F5E5C112B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XDListView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		62DD39231C551D1D00E7EA50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -164,7 +223,6 @@
 			files = (
 				62DD39321C551D1D00E7EA50 /* ViewController.m in Sources */,
 				62DD392F1C551D1D00E7EA50 /* AppDelegate.m in Sources */,
-				62DD39441C551D7900E7EA50 /* XDListView.m in Sources */,
 				62DD392C1C551D1D00E7EA50 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,8 +333,10 @@
 		};
 		62DD393F1C551D1D00E7EA50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FF83E599E01578C9D3089F7 /* Pods-XDListView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NZ7ATV9HL2;
 				INFOPLIST_FILE = XDListView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.su.XDListView;
@@ -286,8 +346,10 @@
 		};
 		62DD39401C551D1D00E7EA50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE4D1F2F8AC8373DB0F8D92B /* Pods-XDListView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NZ7ATV9HL2;
 				INFOPLIST_FILE = XDListView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.su.XDListView;

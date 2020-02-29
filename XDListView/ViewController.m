@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <XDListView.h>
 
 @interface ViewController ()
 
@@ -28,19 +29,18 @@
     
     [self.view addSubview:self.listView];
 }
--(void) update{
-    
+
+- (void)update {
     mCount++;
-    
     [self.listView setNeedsReload];
 }
 
 #pragma mark - DataSource
-- (id)listView:(XDListView *) aListView cellForRowAtIndex:(NSUInteger) aRow{
+- (id)listView:(XDListView *)aListView
+cellForRowAtIndex:(NSUInteger) aRow {
     
     UITableViewCell *cell;
-    
-    if( !(cell = [aListView dequeueReusableCellWithIdentifier:@"cell"]) ){
+    if(!(cell = [aListView dequeueReusableCellWithIdentifier:@"cell"])){
         NSLog(@"Created cell");
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:@"cell"];
@@ -48,33 +48,29 @@
     
     cell.textLabel.text = [NSString stringWithFormat:@"Cell %d",aRow];
     
-    if( aRow % 2 ){
+    if(aRow % 2) {
         [[cell textLabel] setBackgroundColor:[UIColor greenColor]];
-    }
-    else{
+    } else {
         [[cell textLabel] setBackgroundColor:[UIColor blueColor]];
     }
-    
     return cell;
 }
 
-- (NSUInteger) numberOfRowsInListView:(XDListView*) aView{
+- (NSUInteger)numberOfRowsInListView:(XDListView*)aView {
     return mCount;
 }
 
--(CGFloat) listView:(XDListView *) aView heightForRowAtIndex:(NSUInteger) aRow{
-    
+- (CGFloat)listView:(XDListView *)aView
+heightForRowAtIndex:(NSUInteger) aRow {
     if( aRow % 2 ){
         return 150.0f;
-    }
-    else{
+    } else {
         return 50.0f;
     }
-    
 }
 
--(void) listView:(XDListView*) aView didSelectRowAtIndex:(NSUInteger) aRow;
-{
+- (void) listView:(XDListView*)aView
+didSelectRowAtIndex:(NSUInteger)aRow {
     NSLog(@"%s: %ld", __func__, aRow);
 }
 

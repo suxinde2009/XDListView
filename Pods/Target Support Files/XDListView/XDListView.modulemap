@@ -1,0 +1,6 @@
+framework module XDListView {
+  umbrella header "XDListView-umbrella.h"
+
+  export *
+  module * { export * }
+}

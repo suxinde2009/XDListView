@@ -1,0 +1,16 @@
+PODS:
+  - XDListView (0.1.0)
+
+DEPENDENCIES:
+  - XDListView (from `./`)
+
+EXTERNAL SOURCES:
+  XDListView:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  XDListView: 4f69c10178d2aa890e2eaa7459960624d3301537
+
+PODFILE CHECKSUM: f20c8c476c3374fc25135201de597ef219e99f7f
+
+COCOAPODS: 1.9.0.beta.3
